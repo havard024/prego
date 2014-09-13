@@ -1,0 +1,24 @@
+{% load i18n %}
+{% extends "html/base_widget.html" %}
+
+{% block widget_title %}{% trans %}News: All Activity{% endtrans %}{% endblock %}
+
+{% block widget_content %}
+
+{% if updates %}
+
+{{ news_update_list(updates[:20]) }}
+
+{% if updates.count() > 20 %}
+<p class="spaced-h" style="text-align: right; padding-right: 20px;">
+    <a href="{% url news_index %}">{% trans %}See more {% endtrans %}&rarr;</a>
+</p>
+{% endif %}
+
+{% else %}
+
+<p class="spaced-h">{% trans %}Nothing new yet.{% endtrans %}</p>
+
+{% endif %}
+
+{% endblock %}
