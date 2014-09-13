@@ -50,6 +50,9 @@ urlpatterns = patterns('',
     (r'^services/', include('treeio.services.urls')),
     (r'^reports/', include('treeio.reports.urls')),
 
+    # Web app
+    (r'^app/', include('treeio.app.urls')),
+
     # API handlers
     (r'^api/', include('treeio.core.api.urls')),
 

@@ -186,6 +186,7 @@ INSTALLED_APPS = (
     'treeio.reports',
     'treeio.sales',
     'treeio.services',
+    'treeio.app',
     'dajaxice',
     'dajax',
     'coffin',
